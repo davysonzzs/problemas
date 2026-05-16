@@ -29,7 +29,7 @@ export default function App(){
       if (session) {
         setUser(session.user);
         // Limpa os tokens do Google da URL sem recarregar a página
-        window.history.replaceState({}, document.title, window.location.pathname);
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
       } else {
         setUser(null);
       }
