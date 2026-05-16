@@ -45,7 +45,7 @@ export default function App(){
         <Route path="/" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route 
-          path="/Home" 
+          path="/home" 
           element={
             // Passamos o loading para o PrivateRoute não barrar o usuário antes da hora
             <PrivateRoute user={user} loading={loading}>
