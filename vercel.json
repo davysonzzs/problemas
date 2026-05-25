@@ -1,8 +1,7 @@
 {
-  "rewrites": [
+  "redirects": [
     {
-      "source": "/(.*)",
-      "destination": "/manutencao.html"
+      "source": "/((?!manutencao.html).*)"
     }
   ]
 }
