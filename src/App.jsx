@@ -8,6 +8,8 @@ import ProblemasPagina from "./pages/ProblemasPagina";
 import PaginaDeUsuario from "./pages/PaginaDeUsuario";
 import FeedBack from "./pages/FeedBack";
 import ResetSenha from "./pages/ResetSenha";
+import PerguntaClicada from "./pages/PerguntaClicada";
+import AjudaDrm from "./pages/AjudaDrm";
 
 export default function App(){
   const [user, setUser] = useState(null);
@@ -71,6 +73,16 @@ export default function App(){
         <Route path="/feedback" element={
           <PrivateRoute user={user} loading={loading}>
             <FeedBack />
+          </PrivateRoute>
+        }/>
+        <Route path="/perguntas" element={
+          <PrivateRoute user={user} loading={loading}>
+            <AjudaDrm />
+          </PrivateRoute>
+        }/>
+        <Route path="/perguntas/:id" element={
+          <PrivateRoute user={user} loading={loading}>
+            <PerguntaClicada />
           </PrivateRoute>
         }/>
       </Routes>
